@@ -7,7 +7,7 @@ cd ./shared
 echo '*************************************'
 echo 'Running install on shared'
 echo '*************************************'
-npm i
+npm i > /dev/null
 
 cd ../web
 
@@ -15,16 +15,16 @@ echo '*********************************'
 echo 'Running install on web'
 echo '*********************************'
 bundle install
-npm i
+npm i > /dev/null
 
 cd ../desktop
 
 echo '*****************************************************'
 echo 'Adding keys and provisioning profiles for codesigning'
 echo '*****************************************************'
-./auth/add-key.sh
+# ./auth/add-key.sh
 
 echo '*************************************'
 echo 'Running install on desktop'
 echo '*************************************'
-npm i
+npm i > /dev/null
